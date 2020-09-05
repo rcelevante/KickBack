@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Kickback</title>
+</head>
+<body>
+    <header>
+    <div class="jumbotron jumbotron-fluid" id="header">
+        <div class="container">
+          <h1 class="title text-center">KickBack!</h1>
+          <p class="lead text-center"> Have to stay in? No problem!  <br> Make a night of it with customized dinner recipes and movie suggestions.</p>
+          <p class="directions"> Pick a recipe and movie category, hit the <span class="name">KickBack</span> button and enjoy!</p>
+        </div>
+    </div>
+    </header>
+    <main>
+      <div class="row justify-content-center">
+        <button type="submit" id="kickback-submit" class="btn-submit col-10 col-md-8 col-xl-2">KickBack!</button>
+      </div>
+      <div class="options row justify-content-around">
+          <select name="recipe-choice" id="recipe-dropdown" class="btn-choice col-10 col-md-8 col-xl-2 m-1">
+            <option value="" disabled selected>RECIPES</option>
+            <option value="African">AFRICAN</option>
+            <option value="American">AMERICAN</option>
+            <option value="British">BRITISH</option>
+            <option value="Cajun">CAJUN</option>
+            <option value="Caribbean">CARIBBEAN</option>
+            <option value="Chinese">CHINESE</option>
+            <option value="Eastern European">EASTERN EUROPEAN</option>
+            <option value="European">EUROPEAN</option>
+            <option value="French">FRENCH</option>
+            <option value="German">GERMAN</option>
+            <option value="Greek">GREEK</option>
+            <option value="Indian">INDIAN</option>
+            <option value="Italian">ITALIAN</option>
+            <option value="Japanese">JAPANESE</option>
+            <option value="Jewish">JEWISH</option>
+            <option value="Korean">KOREAN</option>
+            <option value="Latin American">LATIN AMERICAN</option>
+            <option value="Mediterranean">MEDITERRANEAN</option>
+            <option value="Mexican">MEXICAN</option>
+            <option value="Middle Eastern">MIDDLE EASTERN</option>
+            <option value="Nordic">NORDIC</option>
+            <option value="Southern">SOUTHERN</option>
+            <option value="Spanish">SPANISH</option>
+            <option value="Thai">THAI</option>
+            <option value="Vietnamese">VIETNAMESE</option>
+          </select>
+          <select name="movie-choice" id="movie-dropdown" class="btn-choice col-10 col-md-8 col-xl-2 m-1">
+            <option value="" disabled selected>MOVIES</option>
+            <option value="Action">ACTION</option>
+            <option value="Adventure">ADVENTURE</option>
+            <option value="Animation">ANIMATION</option>
+            <option value="Comedy">COMEDY</option>
+            <option value="Crime">CRIME</option>
+            <option value="Documentary">DOCUMENTARY</option>
+            <option value="Drama">DRAMA</option>
+            <option value="Horror">HORROR</option>
+            <option value="Music">MUSIC</option>
+            <option value="Romance">ROMANCE</option>
+            <option value="Science Fiction">SCIENCE FICTION</option>
+            <option value="TV Movie">TV MOVIE</option>
+            <option value="Thriller">THRILLER</option>
+            <option value="War">WAR</option>
+            <option value="Western">WESTERN</option>
+          </select>
+      </div>
+        
+      <div class="row justify-content-around results">
+          <div id="recipe-container">
+            <div id="recipe-buttons"></div>
+          </div>
+          <div id="movie-container">
+            <div id="movie-buttons"></div>
+          </div>
+        </div>
+
+      <div id="pictures"  class="row justify-content-around">
+        <img class="hero col-10 col-md-8 col-xl-5 m-2" src="./assets/images/family.jpg" alt="kickbackheroimage">
+        <img class="hero col-10 col-md-8 col-xl-5 m-2" src="./assets/images/tv.jpg" alt="kickbackheroimage">
+      </div>
+
+
+        <div id="saved-container" class="row justify-content-around">
+          <div id="saved-recipes"></div>
+          <div id="saved-movies"></div>
+      </div>
+
+    </main>
+    <!--- MODAL -->
+    <div class="modal" id="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+              <h5 class="modal-title">Missing Item</h5>
+              <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           </div>
+           <div class="modal-body" id="modalText">
+              <p></p>
+           </div>
+            <div class="modal-footer">
+              <button type="button" id="ok" class="btn btn-primary">OK</button>
+           </div>
+         </div>
+      </div>
+    </div>
+          <!--MODAL END-->
+    <footer>
+        <p class="footer text-center">KickBack! + Relax! + Enjoy! <span class="copy">&copy;2020</span></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
